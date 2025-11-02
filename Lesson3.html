@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 3 | Display Property & Elements – Starry Night Edition</title>
+
+<style>
+/* -------- Starry Night Theme -------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: url('starry-night.jpg') center/cover fixed no-repeat;
+  color: #fefcf7;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 15, 40, 0.65);
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px 80px;
+  background: rgba(25, 25, 60, 0.75);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  box-shadow: 0 0 40px rgba(255, 220, 100, 0.25);
+}
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: #ffe66d;
+  margin: 0;
+}
+header p {
+  color: #c9e8ff;
+  font-style: italic;
+}
+
+/* Section Canvas */
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 230, 120, 0.3);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 0 25px rgba(255, 230, 120, 0.15);
+}
+
+/* Demonstration Styles */
+.display-demo {
+  background: rgba(10, 15, 50, 0.6);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  margin-top: 25px;
+  color: #fff9d9;
+}
+.display-demo h3 {
+  color: #ffe66d;
+}
+
+/* Block Elements */
+.block-demo {
+  border: 2px dashed #ffe66d;
+  margin: 10px auto;
+  padding: 15px;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  display: block;
+}
+
+/* Inline Elements */
+.inline-container {
+  border: 2px dashed #84c1ff;
+  padding: 10px;
+  margin-top: 15px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+}
+.inline-demo {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff9d9;
+  border: 1px solid #84c1ff;
+  padding: 5px 10px;
+  display: inline;
+  margin: 3px;
+}
+
+/* Inline-block Elements */
+.inline-block-demo {
+  display: inline-block;
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #ffda44;
+  border-radius: 8px;
+  margin: 5px;
+  color: #fff9d9;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #fff9d9;
+  background: rgba(25, 25, 60, 0.9);
+  border-top: 2px solid rgba(255, 230, 120, 0.4);
+  box-shadow: 0 -5px 15px rgba(255, 230, 120, 0.1);
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Lesson 3 — Display Property, Block-Level & Inline Elements</h1>
+  <p>“Every element has its place on the canvas of creation.” – Inspired by Van Gogh</p>
+</header>
+
+<section>
+  <h2>Understanding the Display Property</h2>
+  <p>
+    The <strong>display</strong> property defines how HTML elements are visually arranged on a webpage.  
+    It’s like deciding how each brushstroke should behave — wide and dominant, or subtle and flowing.
+  </p>
+
+  <h3>1️⃣ Block-Level Elements</h3>
+  <p>
+    Block elements take up the full width of their parent container and start on a new line.  
+    They behave like paragraphs in a book — one after another.
+  </p>
+
+  <div class="display-demo">
+    <div class="block-demo">Block Element 1 — &lt;div&gt;</div>
+    <div class="block-demo">Block Element 2 — &lt;p&gt;</div>
+    <div class="block-demo">Block Element 3 — &lt;section&gt;</div>
+  </div>
+
+  <h3>2️⃣ Inline Elements</h3>
+  <p>
+    Inline elements don’t start on a new line — they sit side by side, like words in a sentence.  
+    Their width only fits the content they hold.
+  </p>
+
+  <div class="display-demo">
+    <div class="inline-container">
+      <span class="inline-demo">&lt;span&gt;</span>
+      <span class="inline-demo">&lt;em&gt;</span>
+      <span class="inline-demo">&lt;a&gt;</span>
+      <span class="inline-demo">&lt;strong&gt;</span>
+    </div>
+  </div>
+
+  <h3>3️⃣ Inline-Block Elements</h3>
+  <p>
+    These behave like inline elements but can have dimensions like block elements.  
+    They’re perfect for aligning boxes neatly in a row.
+  </p>
+
+  <div class="display-demo">
+    <div class="inline-block-demo">Box 1</div>
+    <div class="inline-block-demo">Box 2</div>
+    <div class="inline-block-demo">Box 3</div>
+  </div>
+</section>
+
+<section>
+  <h2>Reflection</h2>
+  <p>
+    This lesson helped me visualize how structure and flow give life to a webpage.  
+    Like strokes on a canvas, each element has its form — some bold and broad (block), others delicate and seamless (inline).
+  </p>
+</section>
+
+<footer>
+  <p>Vincent Benjamin M. Antolin | TLE-ICT Q2 Lesson 3 | Starry Night Series</p>
+</footer>
+</body>
+</html>

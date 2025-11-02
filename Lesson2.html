@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 2 | Types of CSS – Starry Night Edition</title>
+
+<style>
+/* -------- General Starry Theme -------- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: url('starry-night.jpg') center/cover fixed no-repeat;
+  color: #fffbea;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 15, 40, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px 80px;
+  background: rgba(25, 25, 60, 0.75);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  box-shadow: 0 0 40px rgba(255, 220, 100, 0.25);
+}
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.7rem;
+  color: #ffec80;
+  margin: 0;
+}
+header p {
+  color: #cbe5ff;
+  font-style: italic;
+}
+
+/* Section Frame */
+section {
+  max-width: 1000px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 230, 120, 0.3);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 0 25px rgba(255, 230, 120, 0.1);
+}
+
+/* Gallery of Examples */
+.css-types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+.css-box {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  width: 280px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.css-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 240, 150, 0.25);
+}
+.css-box h3 {
+  color: #ffe66d;
+  margin-top: 0;
+}
+.css-box pre {
+  background: rgba(10, 15, 40, 0.6);
+  color: #e7f9ff;
+  border-left: 4px solid #ffda44;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+/* Reflection */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #fff9d9;
+  background: rgba(25, 25, 60, 0.9);
+  border-top: 2px solid rgba(255, 230, 120, 0.4);
+  box-shadow: 0 -5px 15px rgba(255, 230, 120, 0.1);
+}
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Lesson 2 — The Three Types of CSS</h1>
+  <p>“Paint with structure, and style with light.” – Inspired by Van Gogh</p>
+</header>
+
+<section>
+  <h2>What are the Three Types of CSS?</h2>
+  <p>
+    CSS can be applied to HTML documents in three unique ways — <strong>Inline, Internal,</strong> and <strong>External</strong>. 
+    Each type affects how the browser reads and applies styling rules. 
+    Below, we’ll see examples of each method in its own “canvas”.
+  </p>
+
+  <div class="css-types">
+    <!-- Inline CSS -->
+    <div class="css-box">
+      <h3>🎨 Inline CSS</h3>
+      <p>Uses the <code>style</code> attribute inside HTML elements.</p>
+      <pre>
+&lt;p style="color: gold; font-size:18px;"&gt;
+  This text is styled inline!
+&lt;/p&gt;
+      </pre>
+    </div>
+
+    <!-- Internal CSS -->
+    <div class="css-box">
+      <h3>🖌️ Internal CSS</h3>
+      <p>Placed inside a <code>&lt;style&gt;</code> tag within the <code>&lt;head&gt;</code> section.</p>
+      <pre>
+&lt;style&gt;
+p {
+  color: lightblue;
+  text-align: center;
+}
+&lt;/style&gt;
+&lt;p&gt;This is Internal CSS&lt;/p&gt;
+      </pre>
+    </div>
+
+    <!-- External CSS -->
+    <div class="css-box">
+      <h3>🌠 External CSS</h3>
+      <p>Linked through an external <code>.css</code> file.</p>
+      <pre>
+&lt;link rel="stylesheet" href="style.css"&gt;
+p {
+  color: lavender;
+  background-color: navy;
+}
+      </pre>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Reflection</h2>
+  <p>
+    This lesson reminded me that CSS is not only about creativity — it’s also about structure and control. 
+    Each method has its own beauty: Inline for quick strokes, Internal for local style, and External for true composition. 
+    Like Van Gogh’s layered brushwork, each approach adds depth to the canvas of design.
+  </p>
+</section>
+
+<footer>
+  <p>Vincent Benjamin M. Antolin | TLE-ICT Q2 Lesson 2 | Starry Night Series</p>
+</footer>
+</body>
+</html>

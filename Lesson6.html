@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 6 – Setting Dimensions, Pseudo-classes, and Links</title>
+
+<style>
+/* 🌌 Starry Night Theme */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: url('starry-night.jpg') center/cover fixed no-repeat;
+  color: #fdfdfd;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 10, 30, 0.8);
+  backdrop-filter: blur(4px);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px 80px;
+  background: rgba(15, 15, 45, 0.85);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+  box-shadow: 0 0 25px rgba(255, 230, 120, 0.3);
+}
+header h1 {
+  color: #ffe66d;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+}
+header p {
+  color: #c9e8ff;
+  font-style: italic;
+}
+
+/* Section */
+section {
+  max-width: 900px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.07);
+  border: 2px solid rgba(255, 230, 120, 0.3);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 0 25px rgba(255, 230, 120, 0.15);
+}
+h2 {
+  color: #ffe66d;
+  border-bottom: 2px solid #ffe66d;
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 15px;
+}
+
+/* Property Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  background: rgba(255, 255, 255, 0.05);
+}
+th, td {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background: rgba(255, 230, 120, 0.2);
+  color: #fff9d9;
+}
+td {
+  color: #e5ecff;
+}
+
+/* Demo Box Styling */
+.demo {
+  background: rgba(25, 25, 60, 0.6);
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 25px;
+  text-align: center;
+}
+.box {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: #fff;
+  margin: 10px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  font-weight: bold;
+}
+#box-width { width: 200px; height: 100px; }
+#box-height { width: 150px; height: 200px; }
+#box-lineheight { width: 250px; height: 100px; line-height: 50px; }
+#box-maxheight { width: 250px; height: 150px; max-height: 100px; overflow: hidden; }
+#box-minwidth { min-width: 200px; width: 100px; height: 100px; }
+#box-hidden { width: 200px; height: 100px; visibility: hidden; }
+
+/* ✦ Pseudo-classes (Anchor Links) */
+a {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1em;
+  margin: 10px;
+  transition: 0.3s;
+}
+a:link {
+  color: #ffcc70;
+}
+a:visited {
+  color: #c7bfff;
+}
+a:hover {
+  color: #fff9d9;
+  text-shadow: 0 0 10px rgba(255, 230, 120, 0.8);
+}
+a:active {
+  color: #aaf5ff;
+}
+
+/* Reflection Box */
+.reflection {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-left: 3px solid #ffe66d;
+  font-style: italic;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #fff9d9;
+  background: rgba(25, 25, 60, 0.9);
+  border-top: 2px solid rgba(255, 230, 120, 0.4);
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Lesson 6 – Setting Dimensions, Pseudo-classes & Links</h1>
+  <p>“Where code meets the stars — structure and interactivity blend like brush and light.”</p>
+</header>
+
+<section>
+  <h2>Property for Dimensions</h2>
+  <p>
+    CSS allows us to manipulate the size, visibility, and proportion of elements on a webpage.
+    Below is a summary of common dimension properties and their purposes:
+  </p>
+
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Definition</th>
+      <th>Example</th>
+    </tr>
+    <tr><td>visibility</td><td>Controls whether an element is visible or hidden.</td><td>visibility: hidden;</td></tr>
+    <tr><td>width</td><td>Defines the width of an element.</td><td>width: 200px;</td></tr>
+    <tr><td>height</td><td>Defines the height of an element.</td><td>height: 150px;</td></tr>
+    <tr><td>line-height</td><td>Sets the amount of space between lines of text.</td><td>line-height: 20px;</td></tr>
+    <tr><td>max-height</td><td>Sets the maximum height allowed for an element.</td><td>max-height: 120px;</td></tr>
+    <tr><td>min-width</td><td>Sets the minimum width allowed for an element.</td><td>min-width: 200px;</td></tr>
+  </table>
+
+  <div class="demo">
+    <div id="box-width" class="box">Width</div>
+    <div id="box-height" class="box">Height</div>
+    <div id="box-lineheight" class="box">Line Height</div>
+    <div id="box-maxheight" class="box">Max Height</div>
+    <div id="box-minwidth" class="box">Min Width</div>
+    <div id="box-hidden" class="box">Hidden</div>
+  </div>
+</section>
+
+<section>
+  <h2>Pseudo-classes & Links</h2>
+  <p>
+    Pseudo-classes allow us to define the behavior of elements in different states.
+    For example, links change color depending on whether they’re visited, hovered, or clicked.
+  </p>
+
+  <div class="demo">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility" target="_blank">Learn about Visibility</a><br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width" target="_blank">Learn about Width</a><br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank">Learn about Pseudo-classes</a>
+  </div>
+</section>
+
+<section class="reflection">
+  <h2>Reflection</h2>
+  <p>
+    This lesson reminded me that CSS is the architect’s ruler — it defines the boundaries and flow of design.
+    Understanding how to manage visibility and proportions creates balance, while pseudo-classes breathe life
+    into static code. It’s a harmony of control and creativity — much like painting within the night sky.
+  </p>
+</section>
+
+<footer>
+  <p>Vincent Benjamin M. Antolin | TLE-ICT Q2 Lesson 6 | Starry Night Edition</p>
+</footer>
+</body>
+</html>

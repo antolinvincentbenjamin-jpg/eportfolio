@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 5 | CSS Selectors (Types) – Starry Night Edition</title>
+
+<style>
+/* 🌌 Global Theme */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: url('starry-night.jpg') center/cover fixed no-repeat;
+  color: #fefcf7;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 15, 40, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px 80px;
+  background: rgba(25, 25, 60, 0.75);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  box-shadow: 0 0 40px rgba(255, 220, 100, 0.25);
+}
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: #ffe66d;
+  margin: 0;
+}
+header p {
+  color: #c9e8ff;
+  font-style: italic;
+}
+
+/* Section Canvas */
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 230, 120, 0.3);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 0 25px rgba(255, 230, 120, 0.15);
+}
+
+/* Demonstration Zone */
+.demo-area {
+  background: rgba(10, 15, 50, 0.6);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  margin-top: 25px;
+  color: #fff9d9;
+}
+.demo-area div, .demo-area p {
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+
+/* ✨ Selector Types ✨ */
+
+/* Element Selector */
+h3 {
+  color: #ffe66d;
+  border-bottom: 2px solid #ffe66d;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+/* Class Selector */
+.highlight {
+  background-color: rgba(255, 239, 120, 0.25);
+  border: 1px solid #ffe66d;
+}
+
+/* ID Selector */
+#special {
+  background-color: rgba(120, 180, 255, 0.25);
+  border: 1px solid #84c1ff;
+}
+
+/* Universal Selector */
+* {
+  transition: 0.2s ease;
+}
+
+/* Descendant Selector */
+section p span {
+  color: #ffdf6c;
+  font-style: italic;
+}
+
+/* Group Selector */
+h2, h3 {
+  text-shadow: 0 0 8px rgba(255, 240, 150, 0.6);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #fff9d9;
+  background: rgba(25, 25, 60, 0.9);
+  border-top: 2px solid rgba(255, 230, 120, 0.4);
+  box-shadow: 0 -5px 15px rgba(255, 230, 120, 0.1);
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Lesson 5 — CSS Selectors (Types)</h1>
+  <p>“Selectors are stars that guide your brush to every corner of the canvas.” – Inspired by Van Gogh</p>
+</header>
+
+<section>
+  <h2>Understanding CSS Selectors</h2>
+  <p>
+    Selectors tell CSS <strong>which elements</strong> to style. They are the pathways that connect the artist’s hand (the CSS rule)
+    to the right part of the painting (the HTML element).  
+    There are many types of selectors, but here we’ll look at the most common ones:
+  </p>
+
+  <ul>
+    <li><strong>Element Selector</strong> — targets an HTML tag directly (e.g., <code>p</code>, <code>div</code>, <code>h1</code>)</li>
+    <li><strong>Class Selector</strong> — starts with a dot (.) and styles elements with that class</li>
+    <li><strong>ID Selector</strong> — starts with a hash (#) and styles the unique element with that ID</li>
+    <li><strong>Universal Selector</strong> — applies to all elements (* selector)</li>
+    <li><strong>Descendant Selector</strong> — styles elements inside other elements</li>
+    <li><strong>Group Selector</strong> — styles multiple selectors at once (e.g., <code>h1, h2</code>)</li>
+  </ul>
+
+  <div class="demo-area">
+    <h3>🎨 Live Demonstration</h3>
+
+    <div>Element Selector: This <code>&lt;div&gt;</code> is styled by its tag.</div>
+
+    <div class="highlight">Class Selector: Styled using <code>.highlight</code>.</div>
+
+    <div id="special">ID Selector: Styled using <code>#special</code>.</div>
+
+    <p>Descendant Selector Example: The <span>word inside</span> this paragraph glows differently.</p>
+
+    <div style="background:rgba(255,255,255,0.1);padding:10px;border-radius:8px;">
+      Universal Selector: Hover anywhere to see a soft glow ✨
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Reflection</h2>
+  <p>
+    This lesson felt like stargazing through CSS — each selector a constellation guiding design and structure.  
+    With selectors, we can pinpoint exact parts of a webpage and bring them to life, one glowing star at a time.
+  </p>
+</section>
+
+<footer>
+  <p>Vincent Benjamin M. Antolin | TLE-ICT Q2 Lesson 5 | Starry Night Series</p>
+</footer>
+</body>
+</html>

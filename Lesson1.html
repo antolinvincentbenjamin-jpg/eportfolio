@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 1 | Introduction to CSS – Starry Night Edition</title>
+
+<style>
+/* ----- starry palette ----- */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: url('starry-night.jpg') center/cover fixed no-repeat;
+  color: #fefcf7;
+}
+
+/* translucent brush overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 20, 40, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: -1;
+}
+
+/* header shaped like Van Gogh’s swirling horizon */
+header {
+  text-align: center;
+  padding: 60px 20px 80px;
+  background: rgba(25, 25, 60, 0.75);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  box-shadow: 0 0 40px rgba(255, 220, 100, 0.2);
+}
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  color: #ffef85;
+  margin: 0;
+}
+header p {
+  color: #d8eaff;
+  font-style: italic;
+}
+
+/* framed canvas section */
+section {
+  max-width: 900px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 230, 120, 0.4);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 0 25px rgba(255, 230, 120, 0.15);
+  transition: transform 0.3s ease;
+}
+section:hover {
+  transform: scale(1.02);
+}
+h2 {
+  color: #ffe66d;
+  border-bottom: 2px solid #ffe66d;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* code canvas */
+pre {
+  background: rgba(0, 0, 30, 0.6);
+  color: #dff3ff;
+  border-left: 4px solid #ffda44;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+}
+
+/* footer night glow */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #fff9d9;
+  background: rgba(25, 25, 60, 0.9);
+  border-top: 2px solid rgba(255, 230, 120, 0.4);
+  box-shadow: 0 -5px 15px rgba(255, 230, 120, 0.1);
+}
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Lesson 1 — Introduction to CSS</h1>
+  <p>“Color is a language of the soul.” – Vincent Van Gogh</p>
+</header>
+
+<section>
+  <h2>What is CSS?</h2>
+  <p>
+    CSS (<strong>Cascading Style Sheets</strong>) brings life to HTML pages by painting them with color, shape, and motion. It defines how elements appear — their layout, fonts, and tones — separating beauty from structure. Like Van Gogh’s brush, CSS turns plain markup into art.
+  </p>
+
+  <h2>Purpose of CSS</h2>
+  <ul>
+    <li>Adds visual appeal to plain HTML</li>
+    <li>Separates content and design</li>
+    <li>Ensures consistent styling across pages</li>
+    <li>Improves user experience and accessibility</li>
+  </ul>
+
+  <h2>Example</h2>
+  <p>Below is a simple demo showing how CSS colors a page like paint on canvas:</p>
+
+  <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-color: midnightblue;
+  color: gold;
+  font-family: 'Georgia';
+}
+h1 {
+  text-align: center;
+  color: lightyellow;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, Starry World!&lt;/h1&gt;
+  &lt;p&gt;CSS makes the web shine like stars.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+  </pre>
+</section>
+
+<section>
+  <h2>Reflection</h2>
+  <p>
+    In this lesson, I realized that CSS is to HTML what color was to Van Gogh — a way to express emotion and vision beyond words. A website without CSS is a sky without stars.
+  </p>
+</section>
+
+<footer>
+  <p>Vincent Benjamin M. Antolin | TLE-ICT Q2 Lesson 1 | Starry Night Series</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lesson 4 | CSS Rules & Class Selectors – Starry Night Edition</title>
+
+<style>
+/* 🌌 Global Theme */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: url('starry-night.jpg') center/cover fixed no-repeat;
+  color: #fefcf7;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 15, 40, 0.65);
+  backdrop-filter: blur(3px);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px 80px;
+  background: rgba(25, 25, 60, 0.75);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  box-shadow: 0 0 40px rgba(255, 220, 100, 0.25);
+}
+header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  color: #ffe66d;
+  margin: 0;
+}
+header p {
+  color: #c9e8ff;
+  font-style: italic;
+}
+
+/* Section Canvas */
+section {
+  max-width: 900px;
+  margin: 50px auto;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 230, 120, 0.3);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 0 25px rgba(255, 230, 120, 0.15);
+}
+
+/* Code Examples */
+pre {
+  background: rgba(10, 15, 50, 0.6);
+  color: #eafaff;
+  border-left: 4px solid #ffda44;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.9rem;
+}
+
+/* Demonstration Area */
+.demo-area {
+  background: rgba(10, 15, 50, 0.6);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  margin-top: 25px;
+  color: #fff9d9;
+}
+
+.box {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  margin: 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  color: #0a0a20;
+}
+
+/* 🎨 Using Class Selectors */
+.red {
+  background-color: #ff7675;
+  border: 3px solid #ffb6b6;
+}
+.blue {
+  background-color: #74b9ff;
+  border: 3px solid #a4d8ff;
+}
+.yellow {
+  background-color: #ffeaa7;
+  border: 3px solid #fff3b0;
+}
+.glow {
+  box-shadow: 0 0 20px rgba(255, 230, 120, 0.8);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #fff9d9;
+  background: rgba(25, 25, 60, 0.9);
+  border-top: 2px solid rgba(255, 230, 120, 0.4);
+  box-shadow: 0 -5px 15px rgba(255, 230, 120, 0.1);
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Lesson 4 — CSS Rules, Style Properties & Class Selectors</h1>
+  <p>“A style rule is a brushstroke. The class selector is your palette.” – Inspired by Van Gogh</p>
+</header>
+
+<section>
+  <h2>Understanding CSS Rules</h2>
+  <p>
+    A <strong>CSS Rule</strong> consists of two parts:
+    the <strong>selector</strong> (which element it applies to) and the <strong>declaration block</strong>
+    (what style properties are applied).  
+    Within the declaration block, there can be one or more <strong>style properties</strong> — each changing a visual aspect of the element.
+  </p>
+
+  <pre>
+selector {
+  property: value;
+  property: value;
+}
+  </pre>
+
+  <h2>Using Class Selectors</h2>
+  <p>
+    Class selectors are used to apply styles to specific elements with a <code>class</code> attribute.
+    They begin with a period (<code>.</code>) and can be reused multiple times.
+  </p>
+
+  <pre>
+&lt;style&gt;
+.red {
+  background-color: red;
+}
+&lt;/style&gt;
+
+&lt;div class="red"&gt;I’m a red box&lt;/div&gt;
+  </pre>
+
+  <div class="demo-area">
+    <h3>🎨 Live Demonstration</h3>
+    <div class="box red">.red</div>
+    <div class="box blue">.blue</div>
+    <div class="box yellow">.yellow</div>
+    <div class="box blue glow">.blue.glow</div>
+  </div>
+</section>
+
+<section>
+  <h2>Reflection</h2>
+  <p>
+    This lesson taught me that CSS rules are like precise brush commands that give order and emotion to the web’s blank canvas.  
+    Class selectors allow us to group and reuse styles like an artist reusing shades of paint to maintain harmony across a painting.
+  </p>
+</section>
+
+<footer>
+  <p>Vincent Benjamin M. Antolin | TLE-ICT Q2 Lesson 4 | Starry Night Series</p>
+</footer>
+</body>
+</html>
